@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    func executeDelete(){
+        print("Deleting...")
+    }
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Button 1"){ }
+                .buttonStyle(.bordered)
+            
+            Button("Button 2", role: .destructive){ }
+                .buttonStyle(.bordered)
+            
+            Button("Button 3"){ }
+                .buttonStyle(.borderedProminent)
+                .tint(.orange)
+            
+            Button("Button 4", role: .destructive){ }
+                .buttonStyle(.borderedProminent)
         }
-        .padding()
     }
 }
 
